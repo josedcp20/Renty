@@ -1,0 +1,56 @@
+<!DOCTYPE html lang="es">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Renty</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div id="logo-container">
+                <canvas id="logo-canvas" width="400" height="267"></canvas>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="catalogue">Catalogo</a></li>
+                    <li><a href="#reservas">Reservas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li class="search">
+                        <form action="#search-results" method="get">
+                            <input type="text" id="search" name="query" placeholder="Buscar...">
+                            <button type="submit">🔍</button>
+                        </form>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="home">
+            <h2>Bienvenido a Renty</h2>
+            <p>Alquila coches exclusivos con nosotros. ¡Haz tu reserva ahora!</p>
+            
+            <section id="location">
+                <h3>Encuentra nuestras sedes mas cercanas</h3>
+                <button id="get-location">Encontrar sede más cercana</button>
+                <p id="location-result">⭢⭢Tu ubicación se mostrará aquí⭠⭠</p>
+            </section>
+
+            <section id="calendar">
+                <h3>Calenadrio de disponibilidad de coches</h3>
+                <iframe src="https://calendar.google.com/calendar/embed?src=c_6dc68a3342ce401ed204163461507e6384dfac1d9ccd5de4486cd193cea948cb%40group.calendar.google.com&ctz=Europe%2FMadrid"
+                    id="googleCalendar"
+                    frameborder="0"
+                    scrolling="no"></iframe>
+
+            </section>
+
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Renty. Todos los derechos reservados.</p>
+        </footer>
+        
+        <script src="script.js"></script>
+    </body>
+</html>

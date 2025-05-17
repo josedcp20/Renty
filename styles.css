@@ -1,0 +1,170 @@
+body{
+    background-color: #111111;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+#logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ;
+}
+
+#logo-canvas{
+    width: 400px;
+    height: 267px;
+    display: block;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 28px;
+    color: #D4AF37;
+}
+
+
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0;
+}
+
+nav ul li{
+    margin: 0 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #D4AF37;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #C5A300;
+    color: #000000;
+  }
+
+nav ul li.search form {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li.search input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+nav ul li.search input[type="text"]:focus {
+    background-color: #333333;
+    border-color: #C5A300;
+    outline: none;
+}
+
+nav ul li.search input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+nav ul li.search button {
+    background-color: #D4AF37;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li.search button:hover {
+    background-color: #C5A300;
+}
+
+nav ul li.search button:focus {
+    outline: none;
+}
+
+button{
+    background-color: #D4AF37;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #C5A300;
+    cursor: pointer;
+}
+
+section#home {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #222222;
+  }
+  
+  section#home h2 {
+    font-size: 36px;
+    color: #D4AF37;
+  }
+  
+  section#home p {
+    font-size: 18px;
+  }
+
+  #location h3{
+    font-size: 20px;
+    color: #D4AF37;
+    margin-top: 20px;
+}
+
+  #location p{
+    font-size: 10px;
+    margin-top: 20px;
+  }
+
+  #calendar{
+    max-width: 1000px;
+    margin: 30px auto;
+    text-align: center;
+  }
+
+  #calendar h3{
+        font-size: 18px;
+        color: #D4AF37;
+        margin-top: 20px;
+  }
+
+  #googleCalendar{
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    border: 1px solid #D4AF37;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    color: #D4AF37;
+}
