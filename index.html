@@ -8,9 +8,9 @@
     </head>
     <body>
         <header>
-            <div id="logo-container">
+            <figure id="logo-container">
                 <canvas id="logo-canvas" width="400" height="267"></canvas>
-            </div>
+            </figure>
             <nav>
                 <ul>
                     <li><a href="#home">Inicio</a></li>
@@ -26,26 +26,28 @@
             </nav>
         </header>
 
-        <section id="home">
-            <h2>Bienvenido a Renty</h2>
-            <p>Alquila coches exclusivos con nosotros. ¡Haz tu reserva ahora!</p>
-            
-            <section id="location">
-                <h3>Encuentra nuestras sedes mas cercanas</h3>
-                <button id="get-location">Encontrar sede más cercana</button>
-                <p id="location-result">⭢⭢Tu ubicación se mostrará aquí⭠⭠</p>
+        <main>
+            <section id="home">
+                <h2>Bienvenido a Renty</h2>
+                <p>Alquila coches exclusivos con nosotros. ¡Haz tu reserva ahora!</p>
+                
+                <article id="location">
+                    <h3>Encuentra nuestras sedes mas cercanas</h3>
+                    <button id="get-location">Encontrar sede más cercana</button>
+                    <p id="location-result">⭢⭢Tu ubicación se mostrará aquí⭠⭠</p>
+                </article>
+
+                <article id="calendar">
+                    <h3>Calenadrio de disponibilidad de coches</h3>
+                    <iframe src="https://calendar.google.com/calendar/embed?src=c_6dc68a3342ce401ed204163461507e6384dfac1d9ccd5de4486cd193cea948cb%40group.calendar.google.com&ctz=Europe%2FMadrid"
+                        id="googleCalendar"
+                        frameborder="0"
+                        scrolling="no">
+                    </iframe>
+                </article>
+
             </section>
-
-            <section id="calendar">
-                <h3>Calenadrio de disponibilidad de coches</h3>
-                <iframe src="https://calendar.google.com/calendar/embed?src=c_6dc68a3342ce401ed204163461507e6384dfac1d9ccd5de4486cd193cea948cb%40group.calendar.google.com&ctz=Europe%2FMadrid"
-                    id="googleCalendar"
-                    frameborder="0"
-                    scrolling="no"></iframe>
-
-            </section>
-
-        </section>
+        </main>
 
         <footer>
             <p>&copy; 2025 Renty. Todos los derechos reservados.</p>
