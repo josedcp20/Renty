@@ -1,7 +1,7 @@
 Cosas OBLIGATORIAS a implentar en el proyecto:
     -Catálogo
     -Mapa funcional, (debería estar en otra pestaña no en el landing page)
-    -Carrousel BOOTSTRAP
+    -Mejorar Carrousel
     -Acortar margen superior del logo
     -Barra de navegacion siempre se quede arriba cuando se scrollea
     -Mejorar el calendario (si puede ser uno en modo oscuro)
