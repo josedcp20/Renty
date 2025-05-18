@@ -26,3 +26,17 @@ window.onload = function() {
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     };
 };
+
+$(document).ready(function(){
+  $('.carousel').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,
+    arrows: false,
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    pauseOnHover: false
+  });
+});
+
