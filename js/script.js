@@ -40,3 +40,10 @@ $(document).ready(function(){
   });
 });
 
+fetch("http://localhost/Renty/php/listar_coches.php")
+  .then(res => res.json())
+  .then(data => {
+    console.log("Coches:", data);
+    // Aquí puedes mostrar los coches en tarjetas, tablas, etc.
+  })
+  .catch(error => console.error("Error:", error));
