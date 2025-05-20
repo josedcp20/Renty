@@ -12,3 +12,7 @@ Cosas OBLIGATORIAS a implentar en el proyecto:
 Cosas OPCIONALES a implementar en el proyecto:
     -Filtro de marcas en catálogo
     -Implementar badges de BOOTSTRAP para los productos del catalogo
+
+Pautas a seguir:
+    -Password se deja vacío para la cadena de conexión hacia la BDD ("")
+    -Y usuario debe ser "localhost"
