@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-05-2025 a las 12:00:23
+-- Tiempo de generación: 20-05-2025 a las 10:33:04
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -61,7 +61,8 @@ CREATE TABLE `coches` (
   `anio` int(11) DEFAULT NULL,
   `precio_alquiler` decimal(10,2) DEFAULT NULL,
   `disponible` tinyint(1) DEFAULT NULL,
-  `id_sede` int(11) DEFAULT NULL
+  `id_sede` int(11) DEFAULT NULL,
+  `marca` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
