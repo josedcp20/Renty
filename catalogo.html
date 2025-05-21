@@ -1,41 +1,31 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Catálogo de Coches - RarosRent</title>
-  <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-  <header>
-    <h1>Catálogo de Coches</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="catalogo.html">Catálogo</a>
-    </nav>
-  </header>
+<!DOCTYPE html lang="es">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Renty</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <figure id="logo-container">
+                <canvas id="logo-canvas" width="400" height="267"></canvas>
+            </figure>
+        </header>
+        <nav id="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="#reservas">Reservas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
 
-  <main>
-    <section class="catalogo">
-      <article class="coche">
-        <img src="img/nsx.jpg" alt="Honda NSX">
-        <h2>Honda NSX (90s)</h2>
-        <p>Deportivo japonés clásico, elegante y potente. Disponible para eventos o conducción.</p>
-        <button>Reservar</button>
-      </article>
+        <footer>
+            <p>&copy; 2025 Renty. Todos los derechos reservados.</p>
+        </footer>
 
-      <article class="coche">
-        <img src="img/porsche944.jpg" alt="Porsche 944">
-        <h2>Porsche 944</h2>
-        <p>Un Porsche olvidado por muchos, amado por los conocedores. Perfecto para destacar.</p>
-        <button>Reservar</button>
-      </article>
-
-      <!-- Más coches aquí -->
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 RarosRent. Todos los derechos reservados.</p>
-  </footer>
-</body>
+        <!--Llamada archivo .js-->
+        <script src="js/script.js"></script>
+    </body>
 </html>
