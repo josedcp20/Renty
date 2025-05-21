@@ -26,15 +26,61 @@
         <main>
             <section id="home">
                 <article class="carousel">
-                    <figure><img src="images/m1.png" alt="jaguar e-type"></figure>
-                    <figure><img src="images/300sl.jpg" alt="jaguar e-type"></figure>
-                    <figure><img src="images/911.jpg" alt=""></figure>
+                    <figure><img src="images/m1.png" alt="BMW M1 e26"></figure>
+                    <figure><img src="images/300sl.jpg" alt="Mercedes 300SL gullwings"></figure>
+                    <figure><img src="images/911.jpg" alt="Porsche 911"></figure>
                 </article>
 
                 <article id="bienvenida">
                     <h2>Bienvenido a Renty</h2>
                     <p>Alquila coches exclusivos con nosotros. ¡Haz tu reserva ahora!</p>
                 </article>
+            
+                <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mb-12" id="noticias">
+                    <article>
+                        <h2 class="text-2xl font-extrabold text-gray-900">NOTICIAS</h2>
+                        <section class="mt-6 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
+                            <article class="relative w-full h-64 bg-cover bg-center group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl  transition duration-300 ease-in-out"
+                            style="background-image: url('images/yaris.webp');">
+                                <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:opacity-75 transition duration-300 ease-in-out"></div>
+                                <div class="relative w-full h-full px-4 sm:px-6 lg:px-4 flex justify-center items-center">
+                                    <h3 class="text-center">
+                                        <a class="text-white text-2xl font-bold text-center" href="https://www.caranddriver.com/es/coches/novedades/a64454861/toyota-gr-yaris-2025/"
+                                            target="_blank" >
+                                            <span class="absolute inset-0"></span>
+                                            Toyota actualiza el GR Yaris 2025
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="relative w-full h-64 bg-cover bg-center group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl  transition duration-300 ease-in-out"
+                                style="background-image: url('https://images.unsplash.com/photo-1569012871812-f38ee64cd54c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');">
+                                <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:opacity-75 transition duration-300 ease-in-out"></div>
+                                <div class="relative w-full h-full px-4 sm:px-6 lg:px-4 flex justify-center items-center">
+                                    <h3 class="text-center">
+                                        <a class="text-white text-2xl font-bold text-center" href="#">
+                                            <span class="absolute inset-0"></span>
+                                            Python Frameworks
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                            <article class="relative w-full h-64 bg-cover bg-center group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl  transition duration-300 ease-in-out"
+                                style="background-image: url('https://images.unsplash.com/photo-1511376777868-611b54f68947?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80');">
+                                <div class="absolute inset-0 bg-black bg-opacity-50 group-hover:opacity-75 transition duration-300 ease-in-out"></div>
+                                <div class="relative w-full h-full px-4 sm:px-6 lg:px-4 flex justify-center items-center">
+                                    <h3 class="text-center">
+                                        <a class="text-white text-2xl font-bold text-center" href="#">
+                                            <span class="absolute inset-0"></span>
+                                            The best plugins for Visual Studio Code
+                                        </a>
+                                    </h3>
+                                </div>
+                            </article>
+                        </section>
+                    </article>
+                </section>
+            
                 
                 <article id="location">
                     <h3>Encuentra nuestras sedes mas cercanas</h3>
@@ -62,6 +108,15 @@
 
         <!-- Slick Carousel -->
         <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- TW Components CSS -->
+        <link href="https://unpkg.com/tw-elements/dist/css/index.min.css" rel="stylesheet" />
+
+        <!--Noticias-->
+        <script src="https://unpkg.com/tw-elements/dist/js/index.min.js"></script>
 
          <!--Geolocalizacion-->
          <script src="js/geolocation.js"></script>
