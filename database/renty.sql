@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2025 a las 11:11:24
+-- Tiempo de generación: 30-05-2025 a las 12:38:22
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -48,6 +48,17 @@ CREATE TABLE `clientes` (
   `email` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`dni`, `nombre`, `apellidos`, `email`) VALUES
+('12345678A', 'Laura', 'Gómez Pérez', 'laura.gomez@example.com'),
+('23456789B', 'Carlos', 'Martín López', 'carlos.martin@example.com'),
+('34567890C', 'Marta', 'Fernández Ruiz', 'marta.fernandez@example.com'),
+('45678901D', 'David', 'Sánchez Morales', 'david.sanchez@example.com'),
+('56789012E', 'Ana', 'López Torres', 'ana.lopez@example.com');
+
 -- --------------------------------------------------------
 
 --
@@ -64,6 +75,21 @@ CREATE TABLE `coches` (
   `id_marca` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `coches`
+--
+
+INSERT INTO `coches` (`matricula`, `modelo`, `anio`, `precio_alquiler`, `disponible`, `id_sede`, `id_marca`) VALUES
+('1234ABC', 'F-Type Classic', 1971, 400.00, 1, 1, 1),
+('2345BCD', '911 Carrera RS', 1994, 525.00, 1, 2, 2),
+('3456CDE', '300 SEL 6.3', 1970, 350.00, 1, 3, 3),
+('4567DEF', 'F40', 1989, 1750.00, 1, 4, 4),
+('5678EFG', 'M1', 1979, 900.00, 1, 1, 5),
+('6789FGH', 'EVO37', 2021, 1050.00, 1, 2, 6),
+('7890GHI', 'DB5', 1964, 1500.00, 1, 3, 7),
+('8901HIJ', 'NSX', 1991, 500.00, 1, 4, 8),
+('9012IJK', '928', 1987, 475.00, 1, 1, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -74,6 +100,20 @@ CREATE TABLE `marcas` (
   `id_marca` int(11) NOT NULL,
   `nombre` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `marcas`
+--
+
+INSERT INTO `marcas` (`id_marca`, `nombre`) VALUES
+(1, 'Jaguar'),
+(2, 'Porsche'),
+(3, 'Mercedes'),
+(4, 'Ferrari'),
+(5, 'BMW'),
+(6, 'Kimera'),
+(7, 'Aston Martin'),
+(8, 'Honda');
 
 -- --------------------------------------------------------
 
@@ -87,6 +127,16 @@ CREATE TABLE `sedes` (
   `direccion` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `sedes`
+--
+
+INSERT INTO `sedes` (`id_sede`, `nombre`, `direccion`) VALUES
+(1, 'Sede Madrid', 'Calle de Alcalá, 42, 28014 Madrid'),
+(2, 'Sede Sevilla', 'Avenida de la Constitución, 10, 41004 Sevilla'),
+(3, 'Sede Valencia', 'Carrer de Colón, 56, 46004 Valencia'),
+(4, 'Sede Bilbao', 'Gran Vía de Don Diego López de Haro, 15, 48011 Bilbao');
+
 -- --------------------------------------------------------
 
 --
@@ -98,6 +148,19 @@ CREATE TABLE `telefonos_clientes` (
   `dni_cliente` varchar(9) DEFAULT NULL,
   `telefono` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `telefonos_clientes`
+--
+
+INSERT INTO `telefonos_clientes` (`id`, `dni_cliente`, `telefono`) VALUES
+(1, '12345678A', '600123456'),
+(2, '12345678A', '600654321'),
+(3, '23456789B', '611987654'),
+(4, '34567890C', '622123456'),
+(5, '45678901D', '633987654'),
+(6, '56789012E', '644123987'),
+(7, '56789012E', '644987123');
 
 --
 -- Índices para tablas volcadas
@@ -158,19 +221,19 @@ ALTER TABLE `alquileres`
 -- AUTO_INCREMENT de la tabla `marcas`
 --
 ALTER TABLE `marcas`
-  MODIFY `id_marca` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_marca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `sedes`
 --
 ALTER TABLE `sedes`
-  MODIFY `id_sede` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_sede` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `telefonos_clientes`
 --
 ALTER TABLE `telefonos_clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restricciones para tablas volcadas
