@@ -16,3 +16,6 @@ Cosas OPCIONALES a implementar en el proyecto:
 Pautas a seguir:
     -Password se deja vacío para la cadena de conexión hacia la BDD ("")
     -Y usuario debe ser "localhost"
+
+
+Implementar https://www.creative-tim.com/twcomponents/component/tailwind-css-ecommerce-card 
