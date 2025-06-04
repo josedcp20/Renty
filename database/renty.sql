@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-05-2025 a las 12:38:22
+-- Tiempo de generación: 04-06-2025 a las 22:52:03
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -72,23 +72,24 @@ CREATE TABLE `coches` (
   `precio_alquiler` decimal(10,2) DEFAULT NULL,
   `disponible` tinyint(1) DEFAULT NULL,
   `id_sede` int(11) DEFAULT NULL,
-  `id_marca` int(11) DEFAULT NULL
+  `id_marca` int(11) DEFAULT NULL,
+  `imagen_url` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `coches`
 --
 
-INSERT INTO `coches` (`matricula`, `modelo`, `anio`, `precio_alquiler`, `disponible`, `id_sede`, `id_marca`) VALUES
-('1234ABC', 'F-Type Classic', 1971, 400.00, 1, 1, 1),
-('2345BCD', '911 Carrera RS', 1994, 525.00, 1, 2, 2),
-('3456CDE', '300 SEL 6.3', 1970, 350.00, 1, 3, 3),
-('4567DEF', 'F40', 1989, 1750.00, 1, 4, 4),
-('5678EFG', 'M1', 1979, 900.00, 1, 1, 5),
-('6789FGH', 'EVO37', 2021, 1050.00, 1, 2, 6),
-('7890GHI', 'DB5', 1964, 1500.00, 1, 3, 7),
-('8901HIJ', 'NSX', 1991, 500.00, 1, 4, 8),
-('9012IJK', '928', 1987, 475.00, 1, 1, 2);
+INSERT INTO `coches` (`matricula`, `modelo`, `anio`, `precio_alquiler`, `disponible`, `id_sede`, `id_marca`, `imagen_url`) VALUES
+('1234ABC', 'F-Type Classic', 1971, 400.00, 1, 1, 1, 'images/e-type.png'),
+('2345BCD', '911 Carrera RS', 1994, 525.00, 1, 2, 2, 'images/911.png'),
+('3456CDE', '300 SL', 1970, 1000.00, 1, 3, 3, 'images/300slg.png'),
+('4567DEF', 'F40', 1989, 1750.00, 1, 4, 4, 'images/f40.png'),
+('5678EFG', 'M1', 1979, 900.00, 1, 1, 5, 'images/e26-m1.png'),
+('6789FGH', 'EVO37', 2021, 1050.00, 1, 2, 6, 'images/evo37.png'),
+('7890GHI', 'DB5', 1964, 1500.00, 1, 3, 7, 'images/db5.png'),
+('8901HIJ', 'NSX', 1991, 500.00, 1, 4, 8, 'images/nsx.png'),
+('B6727TR', '512-TR', 1992, 1200.00, 1, 1, 4, 'images/512-TR.png');
 
 -- --------------------------------------------------------
 
