@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$user = "root@localhost";
+$user = "root";
 $password = "";
 $basedatos = "Renty";
 
@@ -11,5 +11,5 @@ if ($conexion->connect_error) {
     die("Conexión fallida: " . $conexion->connect_error);
 }
 
-&conexion ->set_charset("utf8mb4");
+$conexion ->set_charset("utf8mb4");
 ?>
