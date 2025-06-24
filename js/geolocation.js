@@ -12,3 +12,7 @@ document.getElementById('get-location').addEventListener('click', function() {
         document.getElementById('location-result').textContent = 'Tu navegador no soporta la Geolocation API.';
     }
 });
+
+document.getElementById('reservar-btn').addEventListener('click', function() {
+    window.location.href = 'catalogo.php';
+});

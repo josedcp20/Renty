@@ -120,7 +120,7 @@ h1{
     outline: none;
 }
 
-button{
+.boton-personalizado{
     background-color: #D4AF37;
     color: #000000;
     border: none;
@@ -164,6 +164,7 @@ main, #home, .carousel {
 #bienvenida{
     margin-top: 0;
     padding-top: 0%;
+    padding-bottom: 5%;
 }
 
 #bienvenida h2{
@@ -190,6 +191,12 @@ section#home p {
     font-size: 20px;
     color: #D4AF37;
     margin-top: 20px;
+}
+
+#location{
+    margin-top: 0;
+    padding-top: 0%;
+    padding-bottom: 5%;
 }
 
 #location p{
