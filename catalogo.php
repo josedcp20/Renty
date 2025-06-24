@@ -22,7 +22,11 @@
               <li class="search">
                 <form action="#search-results" method="get">
                     <input type="text" id="search" name="query" placeholder="Buscar...">
-                    <button type="submit">🔍</button>
+                    <button type="submit" class="p-2 rounded bg-[#D4AF37] hover:bg-[#C5A300] transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="color: black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M16.65 16.65A7.5 7.5 0 1016.65 2a7.5 7.5 0 000 14.65z" />
+                        </svg>
+                    </button>
                 </form>
             </ul>
         </nav>
@@ -39,8 +43,10 @@
                 echo '<div class = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">';
                 while($producto = $resultado->fetch_assoc()){
                     echo '
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                        <img class="w-full" src="'.$producto['imagen_url'].'" alt="'.$producto['modelo'].'">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-black text-white min-h-[420px] flex flex-col justify-between">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover" src="'.$producto['imagen_url'].'" alt="'.$producto['modelo'].'">
+                        </div>
                         <div class="px-6 py-4">
                             <div class="font-bold text-xl mb-2">'. $producto['modelo'] .'('.$producto['anio'].')</div>
                             <p class="text-gray-700 text-base">
