@@ -54,7 +54,7 @@
                             </p>
                         </div>
                         <div class="px-6 py-4">
-                            <button class="bg-ble-50 text-white py-2 px-4 rounded hover:bg-#D4AF37">
+                            <button class="boton-personalizado" onclick="location.href=\'detalle_coche.php?matricula='.$producto['matricula'].'\'">
                                 Ver detalles
                             </button>
                         </div>
