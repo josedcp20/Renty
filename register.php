@@ -59,38 +59,40 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         </figure>
     </header>
 
-    <main style="max-width: 500px; margin: 50px auto; padding: 20px; background-color: #222; border-radius: 8px;">
-        <h2 style="color: #D4AF37;">Crear cuenta</h2>
+    <main>
+        <section style="max-width: 400px; margin: 60px auto; background-color: #222; padding: 20px; border-radius: 8px;">
+            <h2 style="color: #D4AF37;">Crear cuenta</h2>
 
-        <?php foreach ($errores as $error): ?>
-            <p style="color: red;"><?php echo $error; ?></p>
-        <?php endforeach; ?>
+            <?php foreach ($errores as $error): ?>
+                <p style="color: red;"><?php echo $error; ?></p>
+            <?php endforeach; ?>
 
-        <form method="POST">
-            <label>DNI:</label><br>
-            <input type="text" name="dni" required><br><br>
+            <form method="POST">
+                <label>DNI:</label><br>
+                <input type="text" name="dni" required style="width: 100%;"><br><br>
 
-            <label>Nombre:</label><br>
-            <input type="text" name="nombre" required><br><br>
+                <label>Nombre:</label><br>
+                <input type="text" name="nombre" required style="width: 100%;"><br><br>
 
-            <label>Apellidos:</label><br>
-            <input type="text" name="apellidos" required><br><br>
+                <label>Apellidos:</label><br>
+                <input type="text" name="apellidos" required style="width: 100%;"><br><br>
 
-            <label>Email:</label><br>
-            <input type="email" name="email" required><br><br>
+                <label>Email:</label><br>
+                <input type="email" name="email" required style="width: 100%;"><br><br>
 
-            <label>Contraseña:</label><br>
-            <input type="password" name="password" required><br><br>
+                <label>Contraseña:</label><br>
+                <input type="password" name="password" required style="width: 100%;"><br><br>
 
-            <label>Confirmar contraseña:</label><br>
-            <input type="password" name="confirmar_password" required><br><br>
+                <label>Confirmar contraseña:</label><br>
+                <input type="password" name="confirmar_password" required style="width: 100%;"><br><br>
 
-            <button type="submit" class="boton-personalizado">Registrarse</button>
-        </form>
+                <button type="submit" class="boton-personalizado" style="width: 100%;">Registrarse</button>
+            </form>
 
-        <p style="margin-top: 20px;">¿Ya tienes cuenta? 
-            <a href="login.php" style="color: #D4AF37;">Inicia sesión</a>
-        </p>
+            <p style="margin-top: 20px;">¿Ya tienes cuenta? 
+                <a href="login.php" style="color: #D4AF37;">Inicia sesión</a>
+            </p>
+        </section>
     </main>
 
     <footer>

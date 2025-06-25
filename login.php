@@ -44,27 +44,31 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         </figure>
     </header>
 
-    <main style="max-width: 400px; margin: 50px auto; padding: 20px; background-color: #222; border-radius: 8px;">
-        <h2 style="color: #D4AF37;">Iniciar sesión</h2>
+    <main id="formulario">
+        <section style="max-width: 400px; margin: 60px auto; background-color: #222; padding: 20px; border-radius: 8px;">
+            <h2 style="color: #D4AF37; text-align: center;">Iniciar sesión</h2>
 
-        <?php if ($error): ?>
-            <p style="color: red;"><?php echo $error; ?></p>
-        <?php endif; ?>
+            <?php if ($error): ?>
+                <p style="color: red;"><?php echo $error; ?></p>
+            <?php endif; ?>
 
-        <form method="POST">
-            <label for="dni">DNI:</label><br>
-            <input type="text" name="dni" required><br><br>
+            <form method="POST">
+                <label for="dni">DNI:</label><br>
+                <input type="text" name="dni" required style="width: 100%;"><br><br>
 
-            <label for="password">Contraseña:</label><br>
-            <input type="password" name="password" required><br><br>
+                <label for="password">Contraseña:</label><br>
+                <input type="password" name="password" required style="width: 100%;"><br><br>
 
-            <button type="submit" class="boton-personalizado">Entrar</button>
-        </form>
+                <button type="submit" class="boton-personalizado" style="width: 100%;">Entrar</button>
+            </form>
 
-        <p style="margin-top: 20px;">¿No tienes cuenta? 
-            <a href="register.php" style="color: #D4AF37;">Regístrate aquí</a>
-        </p>
+            <p style="margin-top: 20px; text-align: center;">
+                ¿No tienes cuenta? 
+                <a href="register.php" style="color: #D4AF37;">Regístrate aquí</a>
+            </p>
+        </section>
     </main>
+
 
     <footer>
         <p>&copy; 2025 Renty. Todos los derechos reservados.</p>
