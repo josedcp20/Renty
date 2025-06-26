@@ -17,8 +17,8 @@
           <ul>
               <li><a href="index.html">Inicio</a></li>
               <li><a href="catalogo.html">Catálogo</a></li>
-              <li><a href="#reservas">Reservas</a></li>
-              <li><a href="#contacto">Contacto</a></li>
+              <li><a href="#reservas.php">Reservas</a></li>
+              <li><a href="#contacto.html">Contacto</a></li>
               <li class="search">
                 <form action="#search-results" method="get">
                     <input type="text" id="search" name="query" placeholder="Buscar...">
