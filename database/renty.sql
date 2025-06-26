@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-06-2025 a las 22:52:03
+-- Tiempo de generación: 26-06-2025 a las 23:37:40
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -45,19 +45,22 @@ CREATE TABLE `clientes` (
   `dni` varchar(9) NOT NULL,
   `nombre` varchar(50) DEFAULT NULL,
   `apellidos` varchar(100) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `rol` enum('cliente','admin') DEFAULT 'cliente'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `clientes`
 --
 
-INSERT INTO `clientes` (`dni`, `nombre`, `apellidos`, `email`) VALUES
-('12345678A', 'Laura', 'Gómez Pérez', 'laura.gomez@example.com'),
-('23456789B', 'Carlos', 'Martín López', 'carlos.martin@example.com'),
-('34567890C', 'Marta', 'Fernández Ruiz', 'marta.fernandez@example.com'),
-('45678901D', 'David', 'Sánchez Morales', 'david.sanchez@example.com'),
-('56789012E', 'Ana', 'López Torres', 'ana.lopez@example.com');
+INSERT INTO `clientes` (`dni`, `nombre`, `apellidos`, `email`, `password`, `rol`) VALUES
+('00000000A', 'Admin', 'Principal', 'admin@renty.com', '$2y$10$mg.lMtX8XVorRB4Ovke0JeewgBQ/hKwrFweNRndyCAzlwEZ.xVM.C', 'admin'),
+('12345678A', 'Laura', 'Gómez Pérez', 'laura.gomez@example.com', NULL, 'cliente'),
+('23456789B', 'Carlos', 'Martín López', 'carlos.martin@example.com', NULL, 'cliente'),
+('34567890C', 'Marta', 'Fernández Ruiz', 'marta.fernandez@example.com', NULL, 'cliente'),
+('45678901D', 'David', 'Sánchez Morales', 'david.sanchez@example.com', NULL, 'cliente'),
+('56789012E', 'Ana', 'López Torres', 'ana.lopez@example.com', NULL, 'cliente');
 
 -- --------------------------------------------------------
 
