@@ -62,6 +62,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                 <button type="submit" class="boton-personalizado" style="width: 100%;">Entrar</button>
             </form>
 
+            <p style="text-align: center; margin-top: 20px;">
+                <a href="index.php" class="boton-personalizado">Volver al inicio</a>
+            </p>
+
             <p style="margin-top: 20px; text-align: center;">
                 ¿No tienes cuenta? 
                 <a href="register.php" style="color: #D4AF37;">Regístrate aquí</a>

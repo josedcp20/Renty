@@ -15,11 +15,11 @@
         </header>
         <nav id="navbar">
           <ul>
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="catalogo.html">Catálogo</a></li>
-              <li><a href="#reservas.php">Reservas</a></li>
-              <li><a href="#contacto.html">Contacto</a></li>
-              <li class="search">
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="catalogo.php">Catálogo</a></li>
+                <li><a href="reservas.php">Reservas</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
+                <li class="search">
                 <form action="#search-results" method="get">
                     <input type="text" id="search" name="query" placeholder="Buscar...">
                     <button type="submit" class="p-2 rounded bg-[#D4AF37] hover:bg-[#C5A300] transition">
@@ -28,6 +28,9 @@
                         </svg>
                     </button>
                 </form>
+                <?php if(isset($_SESSION['dni'])):?>
+                    <li><a href="loguot.php" class="botono-persoanlizado">Cerrar sesión</a></li>
+                <?php endif; ?>
             </ul>
         </nav>
 
