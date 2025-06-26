@@ -1,9 +1,6 @@
 Cosas OBLIGATORIAS a implentar en el proyecto:
-    -Catálogo
     -Mapa funcional, (debería estar en otra pestaña no en el landing page)
-    -Mejorar Carrousel
     -Mejorar el calendario (si puede ser uno en modo oscuro)
-    -Implementar apartado de noticias
     -Cookies
     -CRUD de contenidos
     -Sistema de pago (no puede cobrar)

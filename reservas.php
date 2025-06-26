@@ -13,6 +13,7 @@
         <meta charset="UTF-8">
         <title>Mis reservas - Renty</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@3.10.2/main.min.css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -27,13 +28,16 @@
                 <li><a href="reservas.php">Reservas</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
                 <?php if(isset($_SESSION['dni'])):?>
-                    <li><a href="loguot.php" class="botono-persoanlizado">Cerrar sesión</a></li>
+                    <li><a href="logout.php" class="botono-persoanlizado">Cerrar sesión</a></li>
                 <?php endif; ?>
             </ul>
         </nav>
         <main>
             <h2 style="color: #D4AF37; text-align: center;">Área de reservas</h2>
-            <p style="text-align: center;">(Aquí mostraremos el calendario y el historial más adelante)</p>
+            
+            <div id="calendar">
+
+            </div>
         </main>
 
         <footer>
@@ -41,5 +45,6 @@
         </footer>
 
         <script src="js/script.js"></script>
+        <script src="js/calendar.js"></script>
     </body>
 </html>
