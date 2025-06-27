@@ -42,10 +42,10 @@ $coche = $resultado->fetch_assoc();
     </header>
     <nav id="navbar">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.php">Inicio</a></li>
             <li><a href="catalogo.php">Catalogo</a></li>
-            <li><a href="#reservas">Reservas</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="reservas.php">Reservas</a></li>
+            <li><a href="contacto.php">Contacto</a></li>
         </ul>
     </nav>
     <main style="padding: 40px 20px;">

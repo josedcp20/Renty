@@ -5,20 +5,20 @@ require_once 'php/conexion.php';
 $error = '';
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
-    $dni = $_POST['dni'];+
+    $dni = $_POST['dni'];
     $password = $_POST['password'];
 
-    $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE dni = ?");
+    $stmt = $conexion->prepare("SELECT * FROM clientes WHERE dni = ?");
     $stmt->bind_param("s", $dni);
     $stmt->execute();
     $resultado = $stmt->get_result();
 
     if($resultado->num_rows === 1){
-        $usuarios = $resultado->fetch_assoc();
-        if(password_verify($password, $usuarios['password'])){
-            $_SESSION['dni'] = $usuarios['dni'];
-            $_SESSION['nombre'] = $usuarios['nombre'];
-            $_SESSION['rol'] = $usuarios['rol'];
+        $clientes = $resultado->fetch_assoc();
+        if(password_verify($password, $clientes['password'])){
+            $_SESSION['dni'] = $clientes['dni'];
+            $_SESSION['nombre'] = $clientes['nombre'];
+            $_SESSION['rol'] = $clientes['rol'];
             header("Location: index.php");
             exit;
         } else {
