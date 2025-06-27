@@ -5,6 +5,10 @@ Cosas OBLIGATORIAS a implentar en el proyecto:
     -CRUD de contenidos
     -Sistema de pago (no puede cobrar)
     -Sistema de reservas
+    -Área mi cuenta
+    -Área administrar
+    -Logica del carrito
+    - Mejorar ver detalles
 
 Cosas OPCIONALES a implementar en el proyecto:
     -Filtro de marcas en catálogo
