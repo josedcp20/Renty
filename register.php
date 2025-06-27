@@ -11,13 +11,13 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     $apellidos = $_POST['apellidos'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $confirmar = $_POST['confirmar'];
+    $confirmar = $_POST['confirmar_password'];
 
     if($password !== $confirmar) {
         $errores[] = "Las contraseñas no coinciden.";
     }
 
-    $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE dni = ?");
+    $stmt = $conexion->prepare("SELECT * FROM clientes WHERE dni = ?");
     $stmt->bind_param("s", $dni);
     $stmt->execute();
     $stmt->store_result();
@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION['dni'] = $dni;
             $_SESSION['nombre'] = $nombre;
             $_SESSION['rol'] = 'cliente';
-            header("Location: index.html");
+            header("Location: index.php");
             exit;
         } else {
             $errores[] = "Error al registrar el usuario. Inténtalo de nuevo.";
