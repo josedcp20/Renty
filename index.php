@@ -21,7 +21,6 @@
                 <li><a href="catalogo.php">Catalogo</a></li>
                 <li><a href="reservas.php">Reservas</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
-
                 <?php if(isset($_SESSION['dni'])):?>
                     <li class="dropdown">
                         <a href="#" class="user-icon">
