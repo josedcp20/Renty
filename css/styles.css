@@ -311,3 +311,6 @@ footer{
   display: block !important;
 }
 
+#catalogo-card h3{
+    color: #D4AF37;
+}

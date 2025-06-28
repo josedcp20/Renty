@@ -63,7 +63,7 @@
         </nav>
 
         <div class="container mx-auto p-4 mt-8">
-            <h1 class="text-3xl font-bold mb-6">Catálogo de Coches Disponibles</h1>
+            <h1 class="text-3xl font-bold mb-6">Nuestros Vehículos</h1>
 
             <?php
             include('php/conexion.php');
@@ -74,21 +74,19 @@
                 echo '<div class = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">';
                 while($producto = $resultado->fetch_assoc()){
                     echo '
-                    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-black text-white min-h-[420px] flex flex-col justify-between">
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-black text-white min-h-[420px] flex flex-col justify-between" onclick="location.href=\'detalle_coche.php?matricula='.$producto['matricula'].'\'"
+                        style="cursor: pointer;">
                         <div class="h-64 overflow-hidden">
                             <img class="w-full h-full object-cover" src="'.$producto['imagen_url'].'" alt="'.$producto['modelo'].'">
                         </div>
                         <div class="px-6 py-4">
-                            <div class="font-bold text-xl mb-2">'. $producto['modelo'] .'('.$producto['anio'].')</div>
+                            <div class="font-bold text-xl mb-2" id=catalogo-card> <h3>'.$producto['icono_url'].' '.$producto['modelo'].' ('.$producto['anio'].')</h3></div>
                             <p class="text-gray-700 text-base">
                                 Alquiler_diario: '.number_format($producto['precio_alquiler'], 2). '€
                             </p>
                         </div>
-                        <div class="px-6 py-4">
-                            <button class="boton-personalizado" onclick="location.href=\'detalle_coche.php?matricula='.$producto['matricula'].'\'">
-                                Ver detalles
-                            </button>
-                        </div>
+                        <br>
+                        <br>
                     </div>';
                 }
                 echo '</div>';
