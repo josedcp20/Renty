@@ -61,7 +61,7 @@
                     <p>Alquila coches exclusivos con nosotros. ¡Haz tu reserva ahora!</p>
                     <button id="reservar-btn" class="boton-personalizado">Reservar ahora</button>
                 </article>
-            
+                
                 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mb-12" id="noticias">
                     <article>
                         <h2 class="text-2xl font-extrabold text-gray-900">NOTICIAS</h2>
