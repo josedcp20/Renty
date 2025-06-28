@@ -314,3 +314,59 @@ footer{
 #catalogo-card h3{
     color: #D4AF37;
 }
+
+.car-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.img-container img{
+    max-width: 90%;
+    max-height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+}
+
+.car-hero img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.car-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.detail-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 200px;
+    text-align: center;
+}
+
+.detail-card span {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+}

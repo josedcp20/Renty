@@ -1,30 +1,34 @@
 <?php
-session_start();
-require_once 'conexion.php';
+// php/get_reservas.php
+header('Content-Type: application/json; charset=UTF-8');
+require_once 'conexion.php'; // ajusta ruta si toca
 
-if (!isset($_SESSION['dni'])) {
-    echo json_encode([]);
-    exit;
+// 1) Recogemos la matrícula por GET (sin sesión)
+if (!isset($_GET['matricula'])) {
+  echo json_encode([]);
+  exit;
 }
+$matricula = $_GET['matricula'];
 
-$dni = $_SESSION['dni'];
-
-// Consulta para obtener las reservas del usuario
-$stmt = $conexion->prepare("SELECT fecha_inicio, fecha_fin FROM alquileres WHERE dni = ?");
-$stmt->bind_param("s", $dni);
+// 2) Consultamos las reservas de este coche
+$stmt = $conexion->prepare("
+  SELECT fecha_inicio, fecha_fin
+    FROM alquileres
+   WHERE matricula = ?
+");
+$stmt->bind_param("s", $matricula);
 $stmt->execute();
 $result = $stmt->get_result();
 
-// Creamos un array para las reservas en el formato que FullCalendar necesita
+// 3) Montamos el array con start/end
 $reservas = [];
-
 while ($row = $result->fetch_assoc()) {
-    $reservas[] = [
-        'title' => 'Reserva',
-        'start' => $row['fecha_inicio'],
-        'end' => $row['fecha_fin']
-    ];
+  $reservas[] = [
+    'start' => $row['fecha_inicio'],
+    'end'   => $row['fecha_fin']
+  ];
 }
 
+// 4) Devolvemos sólo JSON
 echo json_encode($reservas);
-?>
+exit;
